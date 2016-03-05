@@ -9,9 +9,15 @@ as you like.
 
 ## Usage
 
+Using this is pretty straight forward. It will be much easier once it's
+available in the [Enonic Market](https://market.enonic.com), but it's still
+very doable.
+
 ### Step 1: Download the .jar
 
-Get the jar by cloning this repo and building it with `gradle build`.
+Get the jar by downloading it from
+[bintray](https://bintray.com/artifact/download/selbekk/maven/cookieLine-1.0.0.jar),
+or alternatively cloning this repo and building it.
 
 ### Step 2: Install the application
 

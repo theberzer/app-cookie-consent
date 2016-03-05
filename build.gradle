@@ -9,16 +9,18 @@ buildscript {
 
     dependencies {
         classpath "com.enonic.xp:gradle-plugin:${xpVersion}"
+        classpath 'net.researchgate:gradle-release:2.3.4'
     }
 }
 
 apply plugin: 'com.enonic.xp.app'
+apply plugin: 'net.researchgate.release'
 
 app {
     name = project.appName
     displayName = project.displayName
-    vendorName = 'Enonic AS'
-    vendorUrl = 'http://enonic.com'
+    vendorName = 'Kristofer Selbekk'
+    vendorUrl = 'http://www.selbekk.io'
 }
 
 dependencies {

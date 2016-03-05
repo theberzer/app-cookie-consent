@@ -1,0 +1,34 @@
+<div class="cookie-line js-cookie-line">
+    <div class="cookie-line-inner">
+        <p class="cookie-line-intro" data-th-text="${intro}"></p>
+        <div class="cookie-line-buttons">
+            <a class="cookie-line-button mod-accept js-accept-cookies"
+                href="#cookie-line-accept"
+                data-th-text="${acceptButton}"></a>
+            <a class="cookie-line-button mod-read-more js-accept-cookies"
+                data-th-href="${readMoreLink}"
+                data-th-text="${readMoreButton}"></a>
+        </div>
+    </div>
+</div>
+<script>
+    // Cookie line script
+    var cookieLine = document.querySelector('.js-cookie-line');
+    var buttons = document.querySelectorAll('.js-accept-cookies');
+
+    function acceptCookies(e) {
+        var followLink = e.target.href.indexOf('#cookie-line-accept') === -1;
+        if(!followLink) {
+            e.preventDefault();
+        }
+
+        var expires = new Date();
+        expires.setFullYear(expires.getFullYear() + 1);
+        document.cookie = 'cookiesAccepted=true;expires=' + expires.toUTCString();
+        cookieLine.className = cookieLine.className + ' is-hidden';
+    }
+
+    [].slice.call(buttons).forEach(function(button) {
+        button.addEventListener('click', acceptCookies);
+    });
+</script>

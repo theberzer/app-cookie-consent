@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-  <config/>
+  <config>
+    <input name="cookie-line-text-intro" type="TextArea">
+        <label>Introduction</label>
+        <occurrences minimum="0" maximum="1" />
+    </input>
+    <input name="cookie-line-text-accept" type="TextLine">
+        <label>Accept button text</label>
+        <occurrences minimum="1" maximum="1" />
+    </input>
+    <input name="cookie-line-text-read-more" type="TextLine">
+        <label>Read more button text</label>
+        <occurrences minimum="1" maximum="1" />
+    </input>
+    <input name="cookie-line-link" type="ContentSelector">
+        <label>Read more link</label>
+        <occurrences minimum="1" maximum="1" />
+    </input>
+  </config>
+  <filters>
+    <response-filter name="cookie-line" order="10"/>
+  </filters>
 </site>

@@ -1,5 +1,6 @@
 # Built files
 build
+.gradle
 
 # OS specifics
 .DS_Store

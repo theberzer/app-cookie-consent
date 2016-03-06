@@ -16,7 +16,7 @@ very doable.
 ### Step 1: Download the .jar
 
 Get the jar by downloading it from
-[bintray](https://bintray.com/artifact/download/selbekk/maven/cookieLine-1.0.0.jar),
+[bintray](https://bintray.com/artifact/download/selbekk/maven/cookieLine-1.1.0.jar),
 or alternatively cloning this repo and building it.
 
 ### Step 2: Install the application

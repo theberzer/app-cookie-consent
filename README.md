@@ -35,6 +35,7 @@ In the content manager, select your site and click `edit`. Search for
 To keep things simple, you don't have to configure a lot. You'll be presented
 with four text fields:
 
+- **Design** - Choose the theme of the cookie line - or implement your own
 - **Introduction** - A text saying that you're using cookies.
 - **Accept button text** - The text on the "okay I got it" button
 - **Read more button text** - The text on the "please tell me more" button
@@ -43,8 +44,8 @@ with four text fields:
 ## How to style the cookie line
 
 In order for you to have full control of the look-and-feel of the cookie line,
-the application doesn't provide any styles. Chances are you would have to tweak
-them anyhow!
+the application provides a "none" design choice. If you want to implement your
+own design, please choose this option.
 
 The application adds the following markup to the bottom of your site's
 `<body />` tag:
@@ -61,54 +62,11 @@ The application adds the following markup to the bottom of your site's
 </div>
 ```
 
-This structure is designed to give you plenty of flexibility when implementing your styling.
+This structure is designed to give you plenty of flexibility when implementing
+your custom styling.
 
-Once the cookie is accepted, the class `is-hidden` is added to `div.cookie-line`.
-
-### Example of styling:
-
-A very simple styling implementation would be something like this:
-
-```css
-.cookie-line {
-    background-color: rgba(0, 0, 0, 0.8);
-    bottom: 0;
-    position: fixed;
-    transition: all .5s ease-out;
-    width: 100%;
-}
-
-.cookie-line.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-}
-
-.cookie-line-inner {
-    margin: 0 auto;
-    max-width: 1000px;
-    padding: 1em;
-    text-align: center;
-}
-
-.cookie-line-intro, .cookie-line-button {
-    color: white;
-    margin-right: 1em;
-    display: inline-block;
-}
-
-.cookie-line-button:last-of-type {
-    margin-right: 0;
-}
-
-.cookie-line-buttons {
-    display: inline-block;
-}
-
-.cookie-line-intro {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-```
+>**Note:** Once the cookie is accepted, the class `is-hidden` is added to
+`div.cookie-line`.
 
 ## Open open source
 

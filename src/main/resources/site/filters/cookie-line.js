@@ -1,6 +1,16 @@
 var portal = require('/lib/xp/portal');
 var thymeleaf = require('/lib/xp/thymeleaf');
 
+function ensureArray(contribution) {
+    if(!contribution) {
+        contribution = [];
+    }
+    else if(typeof(contribution) === 'string') {
+        contribution = [ contribution ];
+    }
+    return contribution;
+}
+
 exports.responseFilter = function(req, res) {
     // If cookie is set, no cookie line is needed
     if(req.cookies.cookiesAccepted == 'true') {
@@ -15,21 +25,23 @@ exports.responseFilter = function(req, res) {
         intro: siteConfig['cookie-line-text-intro'],
         acceptButton: siteConfig['cookie-line-text-accept'],
         readMoreButton: siteConfig['cookie-line-text-read-more'],
-        readMoreLink: portal.pageUrl({id: siteConfig['cookie-line-link'] })
+        readMoreLink: portal.pageUrl({id: siteConfig['cookie-line-link'] }),
+        layout: siteConfig['cookie-line-layout'],
+        hasLayout: siteConfig['cookie-line-layout'] !== 'none'
     };
+
+    // If layout is requested, include css
+    if(siteConfig['cookie-line-layout'] !== 'none') {
+        var stylesheetHTML = '<link rel="stylesheet" href="' + portal.assetUrl({ path: 'styles.css' }) + '">';
+        res.pageContributions.headEnd = ensureArray(res.pageContributions.headEnd);
+        res.pageContributions.headEnd.push(stylesheetHTML);
+    }
 
     // Render HTML to append
     var html = thymeleaf.render(view, model);
 
     // Append HTML to bottom of body
-    var bodyEnd = res.pageContributions.bodyEnd;
-    if(!bodyEnd) {
-        res.pageContributions.bodyEnd = [];
-    }
-    else if(typeof(bodyEnd) === 'string') {
-        res.pageContributions.bodyEnd = [ bodyEnd ];
-    }
-
+    res.pageContributions.bodyEnd = ensureArray(res.pageContributions.bodyEnd);
     res.pageContributions.bodyEnd.push(html);
 
     return res;

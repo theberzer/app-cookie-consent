@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
   <config>
+    <input name="cookie-line-layout" type="ComboBox">
+        <label>Design</label>
+        <occurrences minimum="1" maximum="1" />
+        <config>
+            <option value="none">No design (implement your own)</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </config>
+    </input>
     <input name="cookie-line-text-intro" type="TextArea">
         <label>Introduction</label>
         <occurrences minimum="0" maximum="1" />

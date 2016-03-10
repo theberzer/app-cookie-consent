@@ -1,37 +1,42 @@
-.cookie-line {
+.app-cookie-line {
     bottom: 0;
     position: fixed;
     transition: all .5s ease-out;
     width: 100%;
 }
 
-.cookie-line.is-hidden {
+.app-cookie-line.is-hidden {
     visibility: hidden;
     opacity: 0;
 }
 
-.cookie-line-inner {
+.app-cookie-line-inner {
     margin: 0 auto;
     max-width: 1000px;
     padding: 1em;
     text-align: center;
 }
 
-.cookie-line-intro, .cookie-line-button {
+.app-cookie-line-intro, .app-cookie-line-button {
     color: inherit;
     margin-right: 1em;
     display: inline-block;
 }
 
-.cookie-line-button:last-of-type {
+.app-cookie-line-button {
+    padding: .5em 1em;
+    border: 1px solid currentColor
+}
+
+.app-cookie-line-button:last-of-type {
     margin-right: 0;
 }
 
-.cookie-line-buttons {
+.app-cookie-line-buttons {
     display: inline-block;
 }
 
-.cookie-line-intro {
+.app-cookie-line-intro {
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -40,12 +45,12 @@
 /* Themes       */
 /****************/
 
-.cookie-line.mod-light {
+.app-cookie-line.mod-light {
     background-color: rgba(255, 255, 255, 0.8);
     color: #222;
 }
 
-.cookie-line.mod-dark {
+.app-cookie-line.mod-dark {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
 }

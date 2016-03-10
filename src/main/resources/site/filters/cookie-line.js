@@ -12,8 +12,10 @@ function ensureArray(contribution) {
 }
 
 exports.responseFilter = function(req, res) {
+    var cookieName = app.name + '-cookies-accepted';
+
     // If cookie is set, no cookie line is needed
-    if(req.cookies.cookiesAccepted == 'true') {
+    if(req.cookies[cookieName] == 'true') {
         return res;
     }
 
@@ -27,6 +29,7 @@ exports.responseFilter = function(req, res) {
     var siteConfig = portal.getSiteConfig();
 
     var model = {
+        cookieName: cookieName,
         intro: siteConfig['cookie-line-text-intro'],
         acceptButton: siteConfig['cookie-line-text-accept'],
         readMoreButton: siteConfig['cookie-line-text-read-more'],

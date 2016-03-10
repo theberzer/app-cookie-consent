@@ -1,18 +1,20 @@
-<div class="cookie-line js-cookie-line" data-th-classappend="${hasLayout ? 'mod-' + layout : ''}">
-    <div class="cookie-line-inner">
-        <p class="cookie-line-intro" data-th-text="${intro}"></p>
-        <div class="cookie-line-buttons">
-            <a class="cookie-line-button mod-accept js-accept-cookies"
+<div class="app-cookie-line js-cookie-line" data-th-classappend="${hasLayout ? 'mod-' + layout : ''}">
+    <div class="app-cookie-line-inner">
+        <p class="app-cookie-line-intro" data-th-text="${intro}"></p>
+        <div class="app-cookie-line-buttons">
+            <a class="app-cookie-line-button mod-accept js-accept-cookies"
                 href="#cookie-line-accept"
                 data-th-text="${acceptButton}"></a>
-            <a class="cookie-line-button mod-read-more js-accept-cookies"
+            <a class="app-cookie-line-button mod-read-more js-accept-cookies"
                 data-th-href="${readMoreLink}"
                 data-th-text="${readMoreButton}"></a>
         </div>
     </div>
 </div>
-<script>
+<script data-th-inline="javascript">
     // Cookie line script
+
+    var cookieName = [[${cookieName}]];
     var cookieLine = document.querySelector('.js-cookie-line');
     var buttons = document.querySelectorAll('.js-accept-cookies');
 
@@ -24,7 +26,7 @@
 
         var expires = new Date();
         expires.setFullYear(expires.getFullYear() + 1);
-        document.cookie = 'cookiesAccepted=true;expires=' + expires.toUTCString();
+        document.cookie = cookieName + '=true;expires=' + expires.toUTCString();
         cookieLine.className = cookieLine.className + ' is-hidden';
     }
 

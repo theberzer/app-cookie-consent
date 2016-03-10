@@ -10,17 +10,37 @@ buildscript {
     dependencies {
         classpath "com.enonic.xp:gradle-plugin:${xpVersion}"
         classpath 'net.researchgate:gradle-release:2.3.4'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
     }
 }
 
 apply plugin: 'com.enonic.xp.app'
 apply plugin: 'net.researchgate.release'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'java'
 
 app {
     name = project.appName
     displayName = project.displayName
     vendorName = 'Kristofer Selbekk'
     vendorUrl = 'http://www.selbekk.io'
+}
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
+    pkg {
+        repo = 'maven'
+        name = project.appName
+        userOrg = 'selbekk'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/selbekk/app-cookie-line.git'
+        version {
+            name = project.version
+            released = new Date()
+            configurations = ['archives']
+        }
+    }
 }
 
 dependencies {

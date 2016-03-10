@@ -17,6 +17,11 @@ exports.responseFilter = function(req, res) {
         return res;
     }
 
+    // If requested through the content studio, no cookie line is needed
+    if(req.mode === 'edit') {
+        return res;
+    }
+
     // Set up model and view
     var view = resolve('cookie-line.html');
     var siteConfig = portal.getSiteConfig();

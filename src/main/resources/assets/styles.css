@@ -6,26 +6,27 @@
 }
 
 .app-cookie-line.is-hidden {
-    visibility: hidden;
     opacity: 0;
+    visibility: hidden;
 }
 
 .app-cookie-line-inner {
     margin: 0 auto;
     max-width: 1000px;
-    padding: 1em;
+    padding: 0 1em;
     text-align: center;
 }
 
 .app-cookie-line-intro, .app-cookie-line-button {
     color: inherit;
-    margin-right: 1em;
     display: inline-block;
+    margin-right: 1em;
 }
 
 .app-cookie-line-button {
+    border: 1px solid currentColor;
     padding: .5em 1em;
-    border: 1px solid currentColor
+    text-decoration: none;
 }
 
 .app-cookie-line-button:last-of-type {
@@ -34,10 +35,10 @@
 
 .app-cookie-line-buttons {
     display: inline-block;
+    margin: 1em 0;
 }
 
 .app-cookie-line-intro {
-    margin-top: 0;
     margin-bottom: 0;
 }
 

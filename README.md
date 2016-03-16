@@ -7,23 +7,21 @@ nice to be on the safe side.
 This application adds a cookie line to your site that you can set up and style
 as you like.
 
-## Usage
+> **Note:** Requires Enonic v6.4.1
 
-Using this is pretty straight forward. It will be much easier once it's
-available in the [Enonic Market](https://market.enonic.com), but it's still
-very doable.
+## How to use
 
-### Step 1: Download the .jar
+The application is available through the
+[Enonic Market](https://market.enonic.com/vendors/selbekk/io.selbekk.cookieLine).
+This means starting to use this application is easier than the first few levels
+of Super Mario.
 
-Get the jar by downloading it from
-[bintray](https://bintray.com/artifact/download/selbekk/maven/cookieLine-1.1.0.jar),
-or alternatively cloning this repo and building it.
+### Step 1: Install application
+Head over to the Applications section of your Enonic XP installation. Click
+"Install", and then select the "Enonic Market" tab. Find "Cookie Line", and
+click the install button.
 
-### Step 2: Install the application
-
-Install the application by either copying the `jar`-file to your
-`$XP_HOME/deploy` folder, or uploading it via the Applications tab in the
-Enonic admin panel.
+Bam, the application is now installed.
 
 ### Step 3: Add app to your site
 
@@ -41,7 +39,7 @@ with four text fields:
 - **Read more button text** - The text on the "please tell me more" button
 - **Read more link** - The page containing more info on your cookie use
 
-## How to style the cookie line
+## Custom styling of the cookie line
 
 In order for you to have full control of the look-and-feel of the cookie line,
 the application provides a "none" design choice. If you want to implement your

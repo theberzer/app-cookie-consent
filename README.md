@@ -34,6 +34,7 @@ To keep things simple, you don't have to configure a lot. You'll be presented
 with four text fields:
 
 - **Design** - Choose the theme of the cookie line - or implement your own
+- **Title** - An optional title for your cookie line.
 - **Introduction** - A text saying that you're using cookies.
 - **Accept button text** - The text on the "okay I got it" button
 - **Read more button text** - The text on the "please tell me more" button
@@ -51,6 +52,7 @@ The application adds the following markup to the bottom of your site's
 ```html
 <div class="cookie-line js-cookie-line">
     <div class="cookie-line-inner">
+        <h2 class="app-cookie-line-title">{{ title }}</h2>
         <p class="cookie-line-intro">{{ intro }}</p>
         <div class="cookie-line-buttons">
             <a class="cookie-line-button mod-accept js-accept-cookies" href="#cookie-line-accept">{{ accept button }}</a>

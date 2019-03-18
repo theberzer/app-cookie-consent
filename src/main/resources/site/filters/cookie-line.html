@@ -1,5 +1,8 @@
 <div class="app-cookie-line js-cookie-line" data-th-classappend="${hasLayout ? 'mod-' + layout : ''}">
     <div class="app-cookie-line-inner">
+        <span data-th-if="${title} != null" data-th-remove="tag">
+            <h2 class="app-cookie-line-title" data-th-text="${title}"></h2>
+        </span>
         <p class="app-cookie-line-intro" data-th-text="${intro}"></p>
         <div class="app-cookie-line-buttons">
             <a class="app-cookie-line-button mod-accept js-accept-cookies"

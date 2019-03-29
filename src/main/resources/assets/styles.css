@@ -13,19 +13,19 @@
 .app-cookie-line-inner {
     margin: 0 auto;
     max-width: 1000px;
-    padding: 0 1em;
+    padding: 0 1rem;
     text-align: center;
 }
 
 .app-cookie-line-intro, .app-cookie-line-button {
     color: inherit;
     display: inline-block;
-    margin-right: 1em;
+    margin-right: 1rem;
 }
 
 .app-cookie-line-button {
     border: 1px solid currentColor;
-    padding: .5em 1em;
+    padding: .5rem 1rem;
     text-decoration: none;
 }
 
@@ -35,7 +35,13 @@
 
 .app-cookie-line-buttons {
     display: inline-block;
-    margin: 1em 0;
+    margin: 1rem 0;
+}
+
+.app-cookie-line-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 1rem;
 }
 
 .app-cookie-line-intro {

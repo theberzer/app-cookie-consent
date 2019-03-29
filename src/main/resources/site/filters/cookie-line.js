@@ -30,6 +30,7 @@ exports.responseFilter = function(req, res) {
 
     var model = {
         cookieName: cookieName,
+        title: siteConfig['cookie-line-text-title'],
         intro: siteConfig['cookie-line-text-intro'],
         acceptButton: siteConfig['cookie-line-text-accept'],
         readMoreButton: siteConfig['cookie-line-text-read-more'],

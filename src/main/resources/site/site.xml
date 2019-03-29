@@ -10,6 +10,10 @@
             <option value="dark">Dark</option>
         </config>
     </input>
+    <input name="cookie-line-text-title" type="TextLine">
+        <label>Title</label>
+        <occurrences minimum="0" maximum="1" />
+    </input>
     <input name="cookie-line-text-intro" type="TextArea">
         <label>Introduction</label>
         <occurrences minimum="0" maximum="1" />

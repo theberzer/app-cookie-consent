@@ -5,12 +5,17 @@
         </span>
         <p class="app-cookie-line-intro" data-th-text="${intro}"></p>
         <div class="app-cookie-line-buttons">
-            <a class="app-cookie-line-button mod-accept js-accept-cookies"
-                href="#cookie-line-accept"
-                data-th-text="${acceptButton}"></a>
+            <span data-th-if="${order} != 'last'" data-th-remove="tag">
+                <a class="app-cookie-line-button mod-accept js-accept-cookies"
+                href="#cookie-line-accept" data-th-text="${acceptButton}"></a>
+            </span>
             <a class="app-cookie-line-button mod-read-more js-accept-cookies"
                 data-th-href="${readMoreLink}"
                 data-th-text="${readMoreButton}"></a>
+            <span data-th-if="${order} == 'last'" data-th-remove="tag">
+                <a class="app-cookie-line-button mod-accept js-accept-cookies"
+                href="#cookie-line-accept" data-th-text="${acceptButton}"></a>
+            </span>
         </div>
     </div>
 </div>

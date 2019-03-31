@@ -10,6 +10,15 @@
             <option value="dark">Dark</option>
         </config>
     </input>
+    <input name="cookie-line-order" type="RadioButton">
+        <label>Button order</label>
+        <occurrences minimum="1" maximum="1" />
+        <config>
+            <option value="first">Accept button first</option>
+            <option value="last">Accept button last</option>
+        </config>
+        <default>first</default>
+    </input>
     <input name="cookie-line-text-title" type="TextLine">
         <label>Title</label>
         <occurrences minimum="0" maximum="1" />

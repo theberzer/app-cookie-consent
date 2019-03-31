@@ -57,3 +57,8 @@ repositories {
         url 'http://repo.enonic.com/public'
     }
 }
+
+wrapper {
+    gradleVersion = '4.10.3'
+    distributionType = Wrapper.DistributionType.BIN
+}

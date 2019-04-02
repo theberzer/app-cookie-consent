@@ -32,6 +32,7 @@ exports.responseFilter = function(req, res) {
         cookieName: cookieName,
         title: siteConfig['cookie-line-text-title'],
         intro: siteConfig['cookie-line-text-intro'],
+        order: siteConfig['cookie-line-order'],
         acceptButton: siteConfig['cookie-line-text-accept'],
         readMoreButton: siteConfig['cookie-line-text-read-more'],
         readMoreLink: portal.pageUrl({id: siteConfig['cookie-line-link'] }),

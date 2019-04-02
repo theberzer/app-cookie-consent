@@ -20,8 +20,8 @@ apply plugin: 'com.jfrog.bintray'
 apply plugin: 'java'
 
 app {
-    name = project.appName
-    displayName = project.displayName
+    name = project.ext.appName
+    displayName = project.ext.displayName
     vendorName = 'Kristofer Selbekk'
     vendorUrl = 'http://www.selbekk.io'
 }
@@ -31,7 +31,7 @@ bintray {
     key = System.getenv('BINTRAY_KEY')
     pkg {
         repo = 'maven'
-        name = project.appName
+        name = project.ext.appName
         userOrg = 'selbekk'
         licenses = ['Apache-2.0']
         vcsUrl = 'https://github.com/selbekk/app-cookie-line.git'
@@ -56,4 +56,9 @@ repositories {
     maven {
         url 'http://repo.enonic.com/public'
     }
+}
+
+wrapper {
+    gradleVersion = '4.10.3'
+    distributionType = Wrapper.DistributionType.BIN
 }

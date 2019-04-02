@@ -31,9 +31,10 @@ In the content manager, select your site and click `edit`. Search for
 ### Step 4: Configure
 
 To keep things simple, you don't have to configure a lot. You'll be presented
-with four text fields:
+with a few choices:
 
 - **Design** - Choose the theme of the cookie line - or implement your own
+- **Button order** - Choose what order you want the buttons to appear.
 - **Title** - An optional title for your cookie line.
 - **Introduction** - A text saying that you're using cookies.
 - **Accept button text** - The text on the "okay I got it" button

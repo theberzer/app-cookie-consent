@@ -14,8 +14,8 @@
         <label>Button order</label>
         <occurrences minimum="1" maximum="1" />
         <config>
-            <option value="first">Accept button first</option>
-            <option value="last">Accept button last</option>
+            <option value="first">Accept button, then Cancel button</option>
+            <option value="last">Cancel button, then Accept button</option>
         </config>
         <default>first</default>
     </input>

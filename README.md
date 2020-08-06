@@ -7,7 +7,7 @@ nice to be on the safe side.
 This application adds a cookie line to your site that you can set up and style
 as you like.
 
-> **Note:** Requires Enonic v6.4.1
+> **Note:** Requires Enonic v7.0.0
 
 ## How to use
 

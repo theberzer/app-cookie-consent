@@ -1,32 +1,36 @@
+This application is a fork of [selbekk's Cookie Line applicaiton](https://github.com/selbekk/app-cookie-line), updated to support Enonic 7.0.0.
+
+This application is actively maintained, if you have any suggestions you can either create a pull request or create an issue in the GitHub.
+
+
 # Add a cookie line to your Enonic XP site!
 
-Telling your users that you use cookies to track them is a mundane task that
-just needs to be implemented. A lot of countries require this by law, so it's
-nice to be on the safe side.
+To comply with GDPR, you need to inform your users that your website uses cookies.
 
-This application adds a cookie line to your site that you can set up and style
-as you like.
+This application adds a cookie consent line to your site, it comes included with two style options(light and dark), but is also fully customizable.
+
 
 > **Note:** Requires Enonic v7.0.0
 
 ## How to use
 
-The application is available through the
+The application is available here:
 [Enonic Market](https://market.enonic.com/vendors/selbekk/io.selbekk.cookieLine).
-This means starting to use this application is easier than the first few levels
-of Super Mario.
+[GitHub](https://github.com/theberzer/app-cookie-consent)
 
 ### Step 1: Install application
-Head over to the Applications section of your Enonic XP installation. Click
-"Install", and then select the "Enonic Market" tab. Find "Cookie Line", and
-click the install button.
+You have two options to install the application:
+1. In admin mode, open Applications section. Click "Install".
+Find "Cookie Consent" and click the install button.
 
-Bam, the application is now installed.
+2.  Firstly, build the application locally. 
+In admin mode, open Applications section. Click "Install".
+Find the build files on your computer and select the compiled .jar.
 
 ### Step 3: Add app to your site
 
 In the content manager, select your site and click `edit`. Search for
-`Cookie line` in the `Applications` search box, and select it.
+`Cookie Consent` in the `Applications` search box, and select it.
 
 ### Step 4: Configure
 
@@ -57,7 +61,7 @@ The application adds the following markup to the bottom of your site's
         <p class="cookie-line-intro">{{ intro }}</p>
         <div class="cookie-line-buttons">
             <a class="cookie-line-button mod-accept js-accept-cookies" href="#cookie-line-accept">{{ accept button }}</a>
-            <a class="cookie-line-button mod-read-more js-accept-cookies" href="{{ read more link}}">{{ read more button }}</a>
+            <a class="cookie-line-button mod-read-more js-accept-cookies" href="{{ read more link}}">{{ read more button }}</a>
         </div>
     </div>
 </div>

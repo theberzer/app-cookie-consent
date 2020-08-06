@@ -4,3 +4,4 @@ build
 
 # OS specifics
 .DS_Store
+.enonic

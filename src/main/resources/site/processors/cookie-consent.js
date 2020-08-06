@@ -24,7 +24,7 @@ exports.responseProcessor = function(req, res) {
     }
 
     // Set up model and view
-    var view = resolve('cookie-line.html');
+    var view = resolve('cookie-consent.html');
     var siteConfig = portal.getSiteConfig();
     var model = {
         cookieName: cookieName,

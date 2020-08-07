@@ -40,7 +40,7 @@
         <occurrences minimum="1" maximum="1" />
     </input>
   </form>
-  <processors>
-    <response-processor name="cookie-consent" order="10"/>  
-  </processors>
+  <filters>
+    <response-filter name="cookie-consent" order="10"/>
+  </filters>
 </site>

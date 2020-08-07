@@ -54,4 +54,4 @@ exports.responseProcessor = function(req, res) {
     res.pageContributions.bodyEnd.push(html);
 
     return res;
-}
+};

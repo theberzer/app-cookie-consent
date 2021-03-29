@@ -3,6 +3,7 @@
     position: fixed;
     transition: all .5s ease-out;
     width: 100%;
+    z-index: 10;
 }
 
 .app-cookie-line.is-hidden {
